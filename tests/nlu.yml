@@ -1,0 +1,107 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello there
+    - hey!
+
+- intent: goodbye
+  examples: |
+    - bye
+    - see you later
+    - thanks, bye
+
+- intent: affirm
+  examples: |
+    - yes
+    - sure
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - is this automated?
+
+- intent: help_usage
+  examples: |
+    - help
+    - what can you do?
+
+- intent: out_of_scope
+  examples: |
+    - book me a flight to Rome
+    - set a timer for 10 minutes
+
+- intent: ask_product_ingredients
+  examples: |
+    - ingredients of [Zestoretic 20/25 Oral Tablet](product_name)
+    - what are the active ingredients in [Qbrelis 1 MG in 1 mL Oral Solution](product_name)?
+    - show ingredients
+    - what’s in [ibuprofen 800 MG / famotidine 26.6 MG Oral Tablet](product_name)?
+
+
+- intent: ask_products_by_ingredient
+  examples: |
+    - list products containing [ibuprofen](ingredient_name)
+    - show [10](top_k) products with [acetaminophen](ingredient_name)
+    - products that include [hydrochlorothiazide](ingredient_name)
+    - show top [5](top_k) [naproxen](ingredient_name) items
+    - items with [APAP](ingredient_name)
+
+
+- intent: ask_product_substitutes
+  examples: |
+    - find substitutes for [Zestoretic 10/12.5 Oral Tablet](product_name)
+    - show [5](top_k) equivalents for [Zestril 10 MG Oral Tablet](product_name)
+    - any equivalents?
+
+
+- intent: ask_co_ingredient_partners
+  examples: |
+    - common co-ingredients with [ibuprofen](ingredient_name)
+    - list [12](top_k) partners for [lisinopril](ingredient_name)
+    - what is this usually combined with?
+
+
+- intent: ask_similar_by_combo_overlap
+  examples: |
+    - similar by combo overlap to [naproxen](ingredient_name)
+    - show top [15](top_k) neighbors for [acetaminophen](ingredient_name)
+    - similar by co-formulation
+
+
+- intent: ask_brand_to_generic
+  examples: |
+    - what's the generic for [Zestril](brand_name)?
+    - [Qbrelis](brand_name) generic name
+    - generic please
+
+
+- intent: ask_generic_to_brands
+  examples: |
+    - brand names for [lisinopril](generic_name)
+    - show [8](top_k) brands for [ibuprofen](generic_name)
+    - which brands are there?
+
+- intent: ask_extract_strengths
+  examples: |
+    - extract strengths for [ibuprofen](ingredient_name)
+    - show [15](top_k) strengths for [lisinopril](ingredient_name)
+    - show strengths
+
+- intent: ask_ancestry_paths
+  examples: |
+    - show ontology paths for [ibuprofen](drug_name)
+    - get hierarchy for [ketorolac tromethamine](drug_name)
+    - show ancestry path
+
+- intent: ask_products_by_ingredient
+  examples: |
+    - list [5](top_k) products that contain [APAP](ingredient_name)
+    - products that include [HCTZ](ingredient_name)

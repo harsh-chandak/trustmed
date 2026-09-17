@@ -1,0 +1,107 @@
+services:
+  neo4j:
+    image: neo4j:5
+    container_name: neo4j
+    restart: unless-stopped
+    ports:
+      - "7474:7474"   
+      - "7687:7687"   
+    environment:
+      
+      - NEO4J_AUTH=neo4j/password123
+      - NEO4J_PLUGINS=["apoc"]
+      - NEO4J_dbms_security_procedures_unrestricted=apoc.*,gds.*
+      - NEO4J_apoc_export_file_enabled=true
+      - NEO4J_apoc_import_file_enabled=true
+
+    volumes:
+      - neo4j-data:/data
+      - neo4j-logs:/logs
+
+    healthcheck:
+      test: ["CMD", "cypher-shell", "-u", "neo4j", "-p", "password123", "RETURN 1;"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 45s  
+
+  action-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.actions
+    container_name: rasa-actions
+    restart: unless-stopped
+    entrypoint: ["python", "-m", "rasa_sdk"]
+    command: ["--actions", "actions", "--port", "5055", "--debug"]
+    environment:
+      - NEO4J_URI=bolt://neo4j:7687
+      - NEO4J_USER=neo4j
+      - NEO4J_PASSWORD=password123
+      - NEO4J_DATABASE=neo4j
+      - RASA_TELEMETRY_ENABLED=false
+      - FOCUS_DIR=/app/focused_dataset
+    volumes:
+      - ./:/app
+      - ./actions:/app/actions
+      - ./focused_dataset:/app/focused_dataset:ro
+    ports:
+      - "5055:5055"
+    depends_on:
+      neo4j:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5055/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 25s   
+
+  rasa:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rasa
+    restart: unless-stopped
+    command: >
+      run
+      --enable-api
+      --port 5005
+      --cors "*"
+      --debug
+    environment:
+      - RASA_TELEMETRY_ENABLED=false
+      - ACTION_SERVER_URL=http://action-server:5055/webhook
+    volumes:
+      - ./:/app
+      
+    ports:
+      - "5005:5005"
+    depends_on:
+      neo4j:
+        condition: service_healthy
+      action-server:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5005/status"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 30s  
+
+  web:
+    image: nginx:alpine
+    container_name: trustmed-web
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./web:/usr/share/nginx/html:ro
+    depends_on:
+      rasa:
+        condition: service_healthy
+
+
+volumes:
+  neo4j-data:
+  neo4j-logs:
+

@@ -1,0 +1,148 @@
+version: "3.1"
+
+stories:
+
+- story: Product ingredients happy path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_product_ingredients
+      entities:
+        - product_name: "Zestoretic 10/12.5 Oral Tablet"
+    - action: action_get_product_ingredients
+    - intent: goodbye
+    - action: utter_goodbye
+
+- story: Ingredient products happy path
+  steps:
+    - intent: ask_products_by_ingredient
+      entities:
+        - ingredient_name: "lisinopril"
+    - action: action_get_products_by_ingredient
+
+- story: Substitutes happy path
+  steps:
+    - intent: ask_product_substitutes
+      entities:
+        - product_name: "Zestoretic 20/25 Oral Tablet"
+    - action: action_get_product_substitutes
+
+- story: Co-ingredient partners happy path
+  steps:
+    - intent: ask_co_ingredient_partners
+      entities:
+        - ingredient_name: "ibuprofen"
+    - action: action_get_co_ingredient_partners
+
+- story: Similar by combo overlap happy path
+  steps:
+    - intent: ask_similar_by_combo_overlap
+      entities:
+        - ingredient_name: "ibuprofen"
+    - action: action_get_similar_by_combo_overlap
+
+- story: Brand to generic happy path
+  steps:
+    - intent: ask_brand_to_generic
+      entities:
+        - brand_name: "Zestril"
+    - action: action_brand_to_generic
+
+- story: Generic to brands happy path
+  steps:
+    - intent: ask_generic_to_brands
+      entities:
+        - generic_name: "lisinopril"
+    - action: action_generic_to_brands
+
+- story: Extract strengths happy path
+  steps:
+    - intent: ask_extract_strengths
+      entities:
+        - ingredient_name: "ibuprofen"
+    - action: action_extract_strengths
+
+- story: Ancestry paths happy path
+  steps:
+    - intent: ask_ancestry_paths
+      entities:
+        - drug_name: "ibuprofen"
+    - action: action_get_ancestry_paths
+
+- story: Ingredient products with top_k
+  steps:
+    - intent: ask_products_by_ingredient
+      entities:
+        - ingredient_name: "acetaminophen"
+        - top_k: "15"
+    - action: action_get_products_by_ingredient
+
+- story: Substitutes with top_k
+  steps:
+    - intent: ask_product_substitutes
+      entities:
+        - product_name: "Zestoretic 10/12.5 Oral Tablet"
+        - top_k: "10"
+    - action: action_get_product_substitutes
+
+- story: No-entity product ingredients (action will prompt)
+  steps:
+    - intent: ask_product_ingredients
+    - action: action_get_product_ingredients
+
+- story: No-entity products by ingredient (action will prompt)
+  steps:
+    - intent: ask_products_by_ingredient
+    - action: action_get_products_by_ingredient
+
+- story: Ask co-ingredient partners then follow up with combo overlap
+  steps:
+    - intent: ask_co_ingredient_partners
+      entities:
+        - ingredient_name: "ibuprofen"
+    - action: action_get_co_ingredient_partners
+    - intent: affirm
+    - action: utter_ack
+    - intent: ask_similar_by_combo_overlap
+      entities:
+        - ingredient_name: "ibuprofen"
+    - action: action_get_similar_by_combo_overlap
+
+- story: Brand → generic → show products for generic
+  steps:
+    - intent: ask_brand_to_generic
+      entities:
+        - brand_name: "Zestril"
+    - action: action_brand_to_generic
+    - intent: ask_products_by_ingredient
+      entities:
+        - ingredient_name: "lisinopril"
+    - action: action_get_products_by_ingredient
+
+- story: Product ingredients then substitutes
+  steps:
+    - intent: ask_product_ingredients
+      entities:
+        - product_name: "Zestoretic 10/12.5 Oral Tablet"
+    - action: action_get_product_ingredients
+    - intent: ask_product_substitutes
+      entities:
+        - product_name: "Zestoretic 10/12.5 Oral Tablet"
+    - action: action_get_product_substitutes
+
+
+- story: Fallback then help
+  steps:
+    - intent: nlu_fallback
+    - action: utter_fallback
+    - intent: help_usage
+    - action: utter_help
+
+- story: Small talk roundtrip
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: help_usage
+    - action: utter_help
+    - intent: goodbye
+    - action: utter_goodbye

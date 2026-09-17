@@ -1,0 +1,4 @@
+overall: 18/101 = 17.82%
+brand_to_generic: 4/53 = 7.55%, avg trust ≈ 88.7
+product_ingredients: 14/40 = 35.00%, avg trust ≈ 89.3
+products_by_ingredient: 0/8 = 0.00%, avg trust ≈ 85.6

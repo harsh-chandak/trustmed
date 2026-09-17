@@ -1,0 +1,25 @@
+# Dockerfile.actions
+FROM rasa/rasa-sdk:3.6.2
+
+WORKDIR /app
+
+USER root
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+  && rm -rf /var/lib/apt/lists/*
+
+# --- Python deps for actions ---
+# neo4j driver is required by knowledge_base.py
+RUN pip install --no-cache-dir neo4j==5.20.0
+USER 1001
+
+# --- Copy actions package ---
+# If your repo has actions.py & knowledge_base.py inside a top-level "actions" folder, keep this:
+COPY actions/ /app/actions/
+
+RUN test -f /app/actions/__init__.py || touch /app/actions/__init__.py
+
+ENV PYTHONPATH=/app
+
+# --- Start the Rasa SDK server ---
+CMD ["start", "--port", "5055", "--actions", "actions", "--debug"]

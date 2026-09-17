@@ -1,0 +1,1818 @@
+[
+  {
+    "text": "what are the active ingredients in HCTZ 12.5 MG / lisinopril 20 MG Oral Tablet?",
+    "entities": [
+      {
+        "start": 35,
+        "end": 78,
+        "value": "HCTZ 12.5 MG / lisinopril 20 MG Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 35,
+        "end": 47,
+        "confidence_entity": 0.9982181191444397,
+        "value": "HCTZ 12.5 MG",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "product_name",
+        "start": 50,
+        "end": 78,
+        "confidence_entity": 0.994976282119751,
+        "value": "lisinopril 20 MG Oral Tablet",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "list ingredients for Zestoretic 10/12.5 Oral Tablet",
+    "entities": [
+      {
+        "start": 21,
+        "end": 51,
+        "value": "Zestoretic 10/12.5 Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 21,
+        "end": 51,
+        "confidence_entity": 0.9987634420394897,
+        "value": "Zestoretic 10/12.5 Oral Tablet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show me the ingredients of Zestril 20 MG Oral Tablet",
+    "entities": [
+      {
+        "start": 27,
+        "end": 52,
+        "value": "Zestril 20 MG Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 27,
+        "end": 52,
+        "confidence_entity": 0.9986318945884705,
+        "value": "Zestril 20 MG Oral Tablet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what's in Qbrelis 1 MG in 1 mL Oral Solution?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 44,
+        "value": "Qbrelis 1 MG in 1 mL Oral Solution",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 10,
+        "end": 44,
+        "confidence_entity": 0.9934050440788269,
+        "value": "Qbrelis 1 MG in 1 mL Oral Solution",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "ingredients of ibuprofen 800 MG / famotidine 26.6 MG Oral Tablet",
+    "entities": [
+      {
+        "start": 15,
+        "end": 64,
+        "value": "ibuprofen 800 MG / famotidine 26.6 MG Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 15,
+        "end": 31,
+        "confidence_entity": 0.8919579982757568,
+        "value": "ibuprofen 800 MG",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "product_name",
+        "start": 34,
+        "end": 64,
+        "confidence_entity": 0.9982329607009888,
+        "value": "famotidine 26.6 MG Oral Tablet",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "active ingredients for Combogesic 325 MG / 97.5 MG Oral Tablet",
+    "entities": [
+      {
+        "start": 23,
+        "end": 62,
+        "value": "Combogesic 325 MG / 97.5 MG Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 23,
+        "end": 40,
+        "confidence_entity": 0.9959151148796082,
+        "value": "Combogesic 325 MG",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "product_name",
+        "start": 43,
+        "end": 62,
+        "confidence_entity": 0.9984472393989563,
+        "value": "97.5 MG Oral Tablet",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "ingredients for Zestoretic 20/25 Oral Tablet",
+    "entities": [
+      {
+        "start": 16,
+        "end": 44,
+        "value": "Zestoretic 20/25 Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 16,
+        "end": 44,
+        "confidence_entity": 0.9986472725868225,
+        "value": "Zestoretic 20/25 Oral Tablet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what's in Reprexain 5/200 (hydrocodone / ibuprofen) Oral Tablet?",
+    "entities": [
+      {
+        "start": 10,
+        "end": 63,
+        "value": "Reprexain 5/200 (hydrocodone / ibuprofen) Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 10,
+        "end": 25,
+        "confidence_entity": 0.9991493225097656,
+        "value": "Reprexain 5/200",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "product_name",
+        "start": 27,
+        "end": 38,
+        "confidence_entity": 0.9923838973045349,
+        "value": "hydrocodone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "product_name",
+        "start": 41,
+        "end": 50,
+        "confidence_entity": 0.841804027557373,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "product_name",
+        "start": 52,
+        "end": 63,
+        "confidence_entity": 0.9994402527809143,
+        "value": "Oral Tablet",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "ingredients for Zestril 10 MG Oral Tablet",
+    "entities": [
+      {
+        "start": 16,
+        "end": 41,
+        "value": "Zestril 10 MG Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 16,
+        "end": 41,
+        "confidence_entity": 0.9975020289421082,
+        "value": "Zestril 10 MG Oral Tablet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what are the ingredients in Zestril 20 MG Oral Tablet?",
+    "entities": [
+      {
+        "start": 28,
+        "end": 53,
+        "value": "Zestril 20 MG Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 28,
+        "end": 53,
+        "confidence_entity": 0.9986423850059509,
+        "value": "Zestril 20 MG Oral Tablet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "ingredients of HCTZ 12.5 MG / lisinopril 20 MG Oral Tablet",
+    "entities": [
+      {
+        "start": 15,
+        "end": 58,
+        "value": "HCTZ 12.5 MG / lisinopril 20 MG Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 15,
+        "end": 27,
+        "confidence_entity": 0.9969049096107483,
+        "value": "HCTZ 12.5 MG",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "product_name",
+        "start": 30,
+        "end": 58,
+        "confidence_entity": 0.9940748810768127,
+        "value": "lisinopril 20 MG Oral Tablet",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "show ingredients for Qbrelis 1 MG in 1 mL Oral Solution",
+    "entities": [
+      {
+        "start": 21,
+        "end": 55,
+        "value": "Qbrelis 1 MG in 1 mL Oral Solution",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 21,
+        "end": 55,
+        "confidence_entity": 0.9932793974876404,
+        "value": "Qbrelis 1 MG in 1 mL Oral Solution",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show products with lisinopril",
+    "entities": [
+      {
+        "start": 19,
+        "end": 29,
+        "value": "lisinopril",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 19,
+        "end": 29,
+        "confidence_entity": 0.9884357452392578,
+        "value": "lisinopril",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "list all products containing ibuprofen",
+    "entities": [
+      {
+        "start": 29,
+        "end": 38,
+        "value": "ibuprofen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 29,
+        "end": 38,
+        "confidence_entity": 0.9956212639808655,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "which products have hydroCHLOROthiazide?",
+    "entities": [
+      {
+        "start": 20,
+        "end": 39,
+        "value": "hydroCHLOROthiazide",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 20,
+        "end": 39,
+        "confidence_entity": 0.8663292527198792,
+        "value": "hydroCHLOROthiazide",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "products that include naproxen",
+    "entities": [
+      {
+        "start": 22,
+        "end": 30,
+        "value": "naproxen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 22,
+        "end": 30,
+        "confidence_entity": 0.9767976999282837,
+        "value": "naproxen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "give me products for acetaminophen",
+    "entities": [
+      {
+        "start": 21,
+        "end": 34,
+        "value": "acetaminophen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 21,
+        "end": 34,
+        "confidence_entity": 0.9644061326980591,
+        "value": "acetaminophen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "list 10 products that contain ibuprofen",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "10",
+        "entity": "top_k"
+      },
+      {
+        "start": 30,
+        "end": 39,
+        "value": "ibuprofen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "value": "10",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9880351424217224,
+        "value": "10",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ingredient_name",
+        "start": 30,
+        "end": 39,
+        "confidence_entity": 0.9920254349708557,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show 15 products with acetaminophen",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "15",
+        "entity": "top_k"
+      },
+      {
+        "start": 22,
+        "end": 35,
+        "value": "acetaminophen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "value": "15",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9897159934043884,
+        "value": "15",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ingredient_name",
+        "start": 22,
+        "end": 35,
+        "confidence_entity": 0.9707119464874268,
+        "value": "acetaminophen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "list top 5 lisinopril products",
+    "entities": [
+      {
+        "start": 9,
+        "end": 10,
+        "value": "5",
+        "entity": "top_k"
+      },
+      {
+        "start": 11,
+        "end": 21,
+        "value": "lisinopril",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 9,
+        "end": 10,
+        "value": "5",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 9,
+        "end": 10,
+        "confidence_entity": 0.984870970249176,
+        "value": "5",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ingredient_name",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.9943965673446655,
+        "value": "lisinopril",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show 20 results for naproxen",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "20",
+        "entity": "top_k"
+      },
+      {
+        "start": 20,
+        "end": 28,
+        "value": "naproxen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "value": "20",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9909222722053528,
+        "value": "20",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ingredient_name",
+        "start": 20,
+        "end": 28,
+        "confidence_entity": 0.9520525336265564,
+        "value": "naproxen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "products for APAP",
+    "entities": [
+      {
+        "start": 13,
+        "end": 17,
+        "value": "APAP",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 13,
+        "end": 17,
+        "confidence_entity": 0.9993471503257751,
+        "value": "acetaminophen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "items with HCTZ",
+    "entities": [
+      {
+        "start": 11,
+        "end": 15,
+        "value": "HCTZ",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 11,
+        "end": 15,
+        "confidence_entity": 0.9966433048248291,
+        "value": "hydroCHLOROthiazide",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "find substitutes for Zestoretic 20/25 Oral Tablet",
+    "entities": [
+      {
+        "start": 21,
+        "end": 49,
+        "value": "Zestoretic 20/25 Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 21,
+        "end": 49,
+        "confidence_entity": 0.9987223744392395,
+        "value": "Zestoretic 20/25 Oral Tablet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "products with the same actives as HCTZ 12.5 MG / lisinopril 10 MG Oral Tablet",
+    "entities": [
+      {
+        "start": 34,
+        "end": 77,
+        "value": "HCTZ 12.5 MG / lisinopril 10 MG Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 34,
+        "end": 46,
+        "confidence_entity": 0.9990243911743164,
+        "value": "HCTZ 12.5 MG",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "product_name",
+        "start": 49,
+        "end": 77,
+        "confidence_entity": 0.9944116473197937,
+        "value": "lisinopril 10 MG Oral Tablet",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "any equivalent products to Zestril 10 MG Oral Tablet?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 52,
+        "value": "Zestril 10 MG Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 27,
+        "end": 52,
+        "confidence_entity": 0.9985978007316589,
+        "value": "Zestril 10 MG Oral Tablet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "alternatives to Reprexain 5/200 (hydrocodone / ibuprofen) Oral Tablet",
+    "entities": [
+      {
+        "start": 16,
+        "end": 69,
+        "value": "Reprexain 5/200 (hydrocodone / ibuprofen) Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "product_name",
+        "start": 16,
+        "end": 31,
+        "confidence_entity": 0.999047577381134,
+        "value": "Reprexain 5/200",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "product_name",
+        "start": 33,
+        "end": 44,
+        "confidence_entity": 0.990202784538269,
+        "value": "hydrocodone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "product_name",
+        "start": 47,
+        "end": 56,
+        "confidence_entity": 0.8011570572853088,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "product_name",
+        "start": 58,
+        "end": 69,
+        "confidence_entity": 0.9993903636932373,
+        "value": "Oral Tablet",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "show 10 substitutes for Zestoretic 10/12.5 Oral Tablet",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "10",
+        "entity": "top_k"
+      },
+      {
+        "start": 24,
+        "end": 54,
+        "value": "Zestoretic 10/12.5 Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "value": "10",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.986812174320221,
+        "value": "10",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "product_name",
+        "start": 24,
+        "end": 54,
+        "confidence_entity": 0.998580813407898,
+        "value": "Zestoretic 10/12.5 Oral Tablet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "list top 5 equivalents of Zestoretic 20/25 Oral Tablet",
+    "entities": [
+      {
+        "start": 9,
+        "end": 10,
+        "value": "5",
+        "entity": "top_k"
+      },
+      {
+        "start": 26,
+        "end": 54,
+        "value": "Zestoretic 20/25 Oral Tablet",
+        "entity": "product_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 9,
+        "end": 10,
+        "value": "5",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 9,
+        "end": 10,
+        "value": "5",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 9,
+        "end": 10,
+        "confidence_entity": 0.9933933615684509,
+        "value": "5",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "product_name",
+        "start": 26,
+        "end": 54,
+        "confidence_entity": 0.9984341263771057,
+        "value": "Zestoretic 20/25 Oral Tablet",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "common co-ingredients with ibuprofen",
+    "entities": [
+      {
+        "start": 27,
+        "end": 36,
+        "value": "ibuprofen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 27,
+        "end": 36,
+        "confidence_entity": 0.9947293400764465,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "which ingredients are often combined with lisinopril?",
+    "entities": [
+      {
+        "start": 42,
+        "end": 52,
+        "value": "lisinopril",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 42,
+        "end": 52,
+        "confidence_entity": 0.957777738571167,
+        "value": "lisinopril",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "coformulated with acetaminophen",
+    "entities": [
+      {
+        "start": 18,
+        "end": 31,
+        "value": "acetaminophen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 18,
+        "end": 31,
+        "confidence_entity": 0.9693160057067871,
+        "value": "acetaminophen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "typical partners for hydrocodone",
+    "entities": [
+      {
+        "start": 21,
+        "end": 32,
+        "value": "hydrocodone",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 21,
+        "end": 32,
+        "confidence_entity": 0.997306227684021,
+        "value": "hydrocodone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what pairs with naproxen?",
+    "entities": [
+      {
+        "start": 16,
+        "end": 24,
+        "value": "naproxen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 16,
+        "end": 24,
+        "confidence_entity": 0.9396340250968933,
+        "value": "naproxen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "list 12 common partners for ibuprofen",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "12",
+        "entity": "top_k"
+      },
+      {
+        "start": 28,
+        "end": 37,
+        "value": "ibuprofen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9552865624427795,
+        "value": "12",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ingredient_name",
+        "start": 28,
+        "end": 37,
+        "confidence_entity": 0.9877163767814636,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "ingredients related to ibuprofen by combo overlap",
+    "entities": [
+      {
+        "start": 23,
+        "end": 32,
+        "value": "ibuprofen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 23,
+        "end": 32,
+        "confidence_entity": 0.9900550842285156,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "similar drugs to naproxen based on co-formulation",
+    "entities": [
+      {
+        "start": 17,
+        "end": 25,
+        "value": "naproxen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 17,
+        "end": 25,
+        "confidence_entity": 0.9729746580123901,
+        "value": "naproxen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show combo overlap neighbors for acetaminophen",
+    "entities": [
+      {
+        "start": 33,
+        "end": 46,
+        "value": "acetaminophen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 33,
+        "end": 46,
+        "confidence_entity": 0.9452752470970154,
+        "value": "acetaminophen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "who co-occurs with hydrocodone most often?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 30,
+        "value": "hydrocodone",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 19,
+        "end": 30,
+        "confidence_entity": 0.9965819716453552,
+        "value": "hydrocodone",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show top 10 neighbors for ibuprofen",
+    "entities": [
+      {
+        "start": 9,
+        "end": 11,
+        "value": "10",
+        "entity": "top_k"
+      },
+      {
+        "start": 26,
+        "end": 35,
+        "value": "ibuprofen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 9,
+        "end": 11,
+        "value": "10",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 9,
+        "end": 11,
+        "value": "10",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 9,
+        "end": 11,
+        "confidence_entity": 0.9933410286903381,
+        "value": "10",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ingredient_name",
+        "start": 26,
+        "end": 35,
+        "confidence_entity": 0.9727720022201538,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "list 25 similar to lisinopril",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "25",
+        "entity": "top_k"
+      },
+      {
+        "start": 19,
+        "end": 29,
+        "value": "lisinopril",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9675602316856384,
+        "value": "25",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ingredient_name",
+        "start": 19,
+        "end": 29,
+        "confidence_entity": 0.9386217594146729,
+        "value": "lisinopril",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what's the generic for Zestril?",
+    "entities": [
+      {
+        "start": 23,
+        "end": 30,
+        "value": "Zestril",
+        "entity": "brand_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "brand_name",
+        "start": 23,
+        "end": 30,
+        "confidence_entity": 0.9919204711914062,
+        "value": "Zestril",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Qbrelis generic name",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Qbrelis",
+        "entity": "brand_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "brand_name",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.9947326183319092,
+        "value": "Qbrelis",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "generic name of Prinize",
+    "entities": [
+      {
+        "start": 16,
+        "end": 23,
+        "value": "Prinize",
+        "entity": "brand_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "brand_name",
+        "start": 16,
+        "end": 23,
+        "confidence_entity": 0.9972817897796631,
+        "value": "Prinize",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "brand Carace generic?",
+    "entities": [
+      {
+        "start": 6,
+        "end": 12,
+        "value": "Carace",
+        "entity": "brand_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "brand_name",
+        "start": 6,
+        "end": 12,
+        "confidence_entity": 0.998038113117218,
+        "value": "Carace",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "the generic of Zestoretic",
+    "entities": [
+      {
+        "start": 15,
+        "end": 25,
+        "value": "Zestoretic",
+        "entity": "brand_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "brand_name",
+        "start": 15,
+        "end": 25,
+        "confidence_entity": 0.986862301826477,
+        "value": "Zestoretic",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "brand names for lisinopril",
+    "entities": [
+      {
+        "start": 16,
+        "end": 26,
+        "value": "lisinopril",
+        "entity": "generic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "generic_name",
+        "start": 16,
+        "end": 26,
+        "confidence_entity": 0.9001558423042297,
+        "value": "lisinopril",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "which brands correspond to ibuprofen?",
+    "entities": [
+      {
+        "start": 27,
+        "end": 36,
+        "value": "ibuprofen",
+        "entity": "generic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "generic_name",
+        "start": 27,
+        "end": 36,
+        "confidence_entity": 0.8256447911262512,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show brands of naproxen",
+    "entities": [
+      {
+        "start": 15,
+        "end": 23,
+        "value": "naproxen",
+        "entity": "generic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "generic_name",
+        "start": 15,
+        "end": 23,
+        "confidence_entity": 0.8105648756027222,
+        "value": "naproxen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "list brands for hydroCHLOROthiazide",
+    "entities": [
+      {
+        "start": 16,
+        "end": 35,
+        "value": "hydroCHLOROthiazide",
+        "entity": "generic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "generic_name",
+        "start": 16,
+        "end": 35,
+        "confidence_entity": 0.8368809223175049,
+        "value": "hydroCHLOROthiazide",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show 10 brands for acetaminophen",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "10",
+        "entity": "top_k"
+      },
+      {
+        "start": 19,
+        "end": 32,
+        "value": "acetaminophen",
+        "entity": "generic_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "value": "10",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9927883744239807,
+        "value": "10",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "generic_name",
+        "start": 19,
+        "end": 32,
+        "confidence_entity": 0.6133741736412048,
+        "value": "acetaminophen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "extract strengths for ibuprofen",
+    "entities": [
+      {
+        "start": 22,
+        "end": 31,
+        "value": "ibuprofen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 22,
+        "end": 31,
+        "confidence_entity": 0.9892088770866394,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show common strengths for lisinopril",
+    "entities": [
+      {
+        "start": 26,
+        "end": 36,
+        "value": "lisinopril",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 26,
+        "end": 36,
+        "confidence_entity": 0.9700407981872559,
+        "value": "lisinopril",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what strengths do we have near naproxen?",
+    "entities": [
+      {
+        "start": 31,
+        "end": 39,
+        "value": "naproxen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 31,
+        "end": 39,
+        "confidence_entity": 0.9321327209472656,
+        "value": "naproxen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "list strengths for acetaminophen",
+    "entities": [
+      {
+        "start": 19,
+        "end": 32,
+        "value": "acetaminophen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "ingredient_name",
+        "start": 19,
+        "end": 32,
+        "confidence_entity": 0.9518246054649353,
+        "value": "acetaminophen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show 15 strengths for ibuprofen",
+    "entities": [
+      {
+        "start": 5,
+        "end": 7,
+        "value": "15",
+        "entity": "top_k"
+      },
+      {
+        "start": 22,
+        "end": 31,
+        "value": "ibuprofen",
+        "entity": "ingredient_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "value": "15",
+        "extractor": "RegexEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "top_k",
+        "start": 5,
+        "end": 7,
+        "confidence_entity": 0.9890032410621643,
+        "value": "15",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "ingredient_name",
+        "start": 22,
+        "end": 31,
+        "confidence_entity": 0.9790011048316956,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "show ontology paths for ibuprofen",
+    "entities": [
+      {
+        "start": 24,
+        "end": 33,
+        "value": "ibuprofen",
+        "entity": "drug_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug_name",
+        "start": 24,
+        "end": 33,
+        "confidence_entity": 0.6452431678771973,
+        "value": "ibuprofen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what is the class ancestry of lisinopril?",
+    "entities": [
+      {
+        "start": 30,
+        "end": 40,
+        "value": "lisinopril",
+        "entity": "drug_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug_name",
+        "start": 30,
+        "end": 40,
+        "confidence_entity": 0.691737711429596,
+        "value": "lisinopril",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "give me the ancestry path for naproxen",
+    "entities": [
+      {
+        "start": 30,
+        "end": 38,
+        "value": "naproxen",
+        "entity": "drug_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug_name",
+        "start": 30,
+        "end": 38,
+        "confidence_entity": 0.6164524555206299,
+        "value": "naproxen",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "get hierarchy for ketorolac tromethamine",
+    "entities": [
+      {
+        "start": 18,
+        "end": 40,
+        "value": "ketorolac tromethamine",
+        "entity": "drug_name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "drug_name",
+        "start": 18,
+        "end": 40,
+        "confidence_entity": 0.9938236474990845,
+        "value": "ketorolac tromethamine",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

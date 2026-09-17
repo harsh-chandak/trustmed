@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>TrustMed Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            --bg: #0b1220;
+            --panel: #121a2b;
+            --accent: #4f8cff;
+            --accent-2: #23d997;
+            --text: #e8eefc;
+            --muted: #9fb0d5;
+            --bot: #1b2742;
+            --user: #214e94;
+            --border: #223152;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+            background: linear-gradient(180deg, #0a101d 0%, #0d1628 100%);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .app {
+            width: min(1100px, 95vw);
+            height: min(90vh, 900px);
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            display: grid;
+            grid-template-rows: auto 1fr;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .35);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 16px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        header .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        header .status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-left: auto;
+            font-size: 13px;
+            color: var(--muted)
+        }
+
+        header h1 {
+            font-size: 16px;
+            margin: 0;
+            letter-spacing: .3px;
+            font-weight: 650
+        }
+
+        header .badge {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: #1a2440;
+            color: #9fc2ff;
+            border: 1px solid #273a6b
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            min-height: 0;
+        }
+
+        .side {
+            border-right: 1px solid var(--border);
+            padding: 14px;
+            overflow: auto;
+        }
+
+        .side h2 {
+            font-size: 13px;
+            color: var(--muted);
+            margin: 10px 0 6px
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 12px
+        }
+
+        .field label {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        .field input {
+            background: #0e1530;
+            color: var(--text);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px 12px;
+            outline: none;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 12px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn.secondary {
+            background: #20345d;
+            color: #cfe0ff
+        }
+
+        .samples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px
+        }
+
+        .chip {
+            background: #0f1931;
+            color: #cde;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .chat {
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+
+        .log {
+            flex: 1;
+            overflow: auto;
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            overscroll-behavior: contain;
+        }
+
+        .bubble {
+            max-width: 70%;
+            padding: 12px 14px;
+            border-radius: 14px;
+            line-height: 1.35;
+            border: 1px solid var(--border);
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            position: relative;
+        }
+
+        .bubble.bot {
+            align-self: flex-start;
+            background: var(--bot)
+        }
+
+        .bubble.user {
+            align-self: flex-end;
+            background: var(--user)
+        }
+
+        .bubble .meta {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 6px
+        }
+
+        .buttons {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+            flex-wrap: wrap
+        }
+
+        .quick {
+            background: #162344;
+            border: 1px solid #284581;
+            color: #cfe0ff;
+            border-radius: 8px;
+            padding: 6px 10px;
+            font-size: 12px;
+            cursor: pointer
+        }
+
+        .typing {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            padding: 10px 14px;
+            width: max-content;
+            background: #111b34;
+            border: 1px solid var(--border);
+            border-radius: 12px
+        }
+
+        .typing .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #8fb3ff;
+            opacity: .4;
+            animation: blink 1.4s infinite ease-in-out;
+        }
+
+        .typing .dot:nth-child(2) {
+            animation-delay: .15s
+        }
+
+        .typing .dot:nth-child(3) {
+            animation-delay: .3s
+        }
+
+        @keyframes blink {
+
+            0%,
+            80%,
+            100% {
+                opacity: .2
+            }
+
+            40% {
+                opacity: 1
+            }
+        }
+
+        .composer {
+            border-top: 1px solid var(--border);
+            display: flex;
+            gap: 10px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .composer input {
+            flex: 1;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 14px;
+            background: #0f1931;
+            color: var(--text);
+            outline: none;
+        }
+
+        .send {
+            background: var(--accent-2);
+            color: #052814;
+            font-weight: 700;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 16px;
+            cursor: pointer
+        }
+
+        .link {
+            color: #9fc2ff;
+            text-decoration: none;
+            border-bottom: 1px dotted #3a5ea6
+        }
+
+        img.msg-image {
+            max-width: 280px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            display: block;
+            margin-top: 6px
+        }
+
+        .hint {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 2px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <header>
+            <span class="badge">TrustMed</span>
+            <h1>Drug Knowledge Assistant</h1>
+            <div class="status">
+                <span id="status-dot" class="dot" style="background:#777"></span>
+                <span id="status-text">checking server…</span>
+            </div>
+        </header>
+
+        <div class="main">
+            <!-- Left panel -->
+            <aside class="side">
+                <h2>Connection</h2>
+                <div class="field">
+                    <label for="server">Rasa REST URL</label>
+                    <input id="server" type="text" spellcheck="false"
+                        value="http://localhost:5005/webhooks/rest/webhook">
+                    <div class="hint">Default is your local Docker Rasa port.</div>
+                </div>
+                <div class="field">
+                    <label for="sender">Sender ID</label>
+                    <input id="sender" type="text" value="web-user">
+                    <div class="hint">Per-user conversation id. Stored in your browser.</div>
+                </div>
+                <div style="display:flex; gap:8px; margin-bottom:14px;">
+                    <button class="btn" id="save-btn">Save</button>
+                    <button class="btn secondary" id="ping-btn">Ping /status</button>
+                </div>
+
+                <h2>Examples</h2>
+                <div class="samples">
+                    <button class="chip">list 10 products that contain ibuprofen</button>
+                    <button class="chip">ingredients of Zestoretic 20/25 Oral Tablet</button>
+                    <button class="chip">find substitutes for Zestoretic 10/12.5 Oral Tablet</button>
+                    <button class="chip">common co-ingredients with ibuprofen</button>
+                    <button class="chip">what's the generic for Zestril?</button>
+                    <button class="chip">show 15 products with acetaminophen</button>
+                </div>
+            </aside>
+
+            <section class="chat">
+                <div id="log" class="log"></div>
+
+                <div class="composer">
+                    <input id="input" type="text" placeholder="Type a message…  (Enter to send)" />
+                    <button id="send" class="send">Send</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        const els = {
+            log: document.getElementById('log'),
+            input: document.getElementById('input'),
+            send: document.getElementById('send'),
+            server: document.getElementById('server'),
+            sender: document.getElementById('sender'),
+            save: document.getElementById('save-btn'),
+            ping: document.getElementById('ping-btn'),
+            statusDot: document.getElementById('status-dot'),
+            statusText: document.getElementById('status-text'),
+        };
+
+        const storageKey = 'trustmed-chat';
+        const state = loadState();
+
+        function loadState() {
+            try {
+                const saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+                return {
+                    server: saved.server || 'http://localhost:5005/webhooks/rest/webhook',
+                    sender: saved.sender || `web-${Math.random().toString(36).slice(2, 8)}`
+                };
+            } catch { return { server: 'http://localhost:5005/webhooks/rest/webhook', sender: 'web-user' }; }
+        }
+        function saveState() {
+            localStorage.setItem(storageKey, JSON.stringify({ server: els.server.value.trim(), sender: els.sender.value.trim() }));
+        }
+
+        els.server.value = state.server;
+        els.sender.value = state.sender;
+
+        function nowTime() {
+            const d = new Date();
+            return d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+        function scrollBottom() {
+            requestAnimationFrame(() => {
+                els.log.scrollTop = els.log.scrollHeight;
+            });
+        }
+        function addBubble(text, who = 'bot', extras = {}) {
+            const wrap = document.createElement('div');
+            wrap.className = `bubble ${who}`;
+            if (text) { wrap.textContent = text; }
+            if (extras.html) { wrap.innerHTML = extras.html; }
+            if (extras.image) {
+                const img = document.createElement('img');
+                img.src = extras.image; img.alt = 'image'; img.className = 'msg-image';
+                wrap.appendChild(img);
+            }
+            if (extras.buttons && extras.buttons.length) {
+                const row = document.createElement('div');
+                row.className = 'buttons';
+                extras.buttons.forEach(b => {
+                    const btn = document.createElement('button');
+                    btn.className = 'quick';
+                    btn.textContent = b.title || b.payload || 'Option';
+                    btn.addEventListener('click', () => {
+                        sendMessage(b.payload || b.title);
+                    });
+                    row.appendChild(btn);
+                });
+                wrap.appendChild(row);
+            }
+            const meta = document.createElement('div');
+            meta.className = 'meta';
+            meta.textContent = (who === 'bot' ? 'Assistant' : 'You') + ' • ' + nowTime();
+            wrap.appendChild(meta);
+            els.log.appendChild(wrap);
+            scrollBottom();
+            return wrap;
+        }
+        function addTyping() {
+            const box = document.createElement('div');
+            box.className = 'typing';
+            box.innerHTML = '<span class="dot"></span><span class="dot"></span><span class="dot"></span>';
+            els.log.appendChild(box);
+            scrollBottom();
+            return box;
+        }
+        function removeEl(node) { if (node && node.parentNode) { node.parentNode.removeChild(node); } }
+
+        async function pingStatus() {
+            setStatus('checking', 'Checking…');
+            try {
+                const base = els.server.value.trim();
+                const root = base.replace(/\/webhooks\/rest\/webhook\/?$/, '');
+                const r = await fetch(root + '/status', { method: 'GET' });
+                setStatus(r.ok ? 'ok' : 'down', r.ok ? 'connected' : ('status: ' + r.status));
+            } catch (e) {
+                setStatus('down', 'unreachable');
+            }
+        }
+        function setStatus(state, label) {
+            if (state === 'ok') { els.statusDot.style.background = '#23d997'; }
+            else if (state === 'down') { els.statusDot.style.background = '#e85d75'; }
+            else { els.statusDot.style.background = '#777'; }
+            els.statusText.textContent = label;
+        }
+
+        async function sendMessage(text) {
+            const msg = (text ?? els.input.value).trim();
+            if (!msg) return;
+            
+            addBubble(msg, 'user');
+            els.input.value = '';
+            
+            const typing = addTyping();
+            
+            const payload = {
+                sender: els.sender.value.trim(),
+                message: msg
+            };
+            const url = els.server.value.trim();
+
+            try {
+                const res = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json().catch(() => []);
+                removeEl(typing);
+
+                if (!Array.isArray(data) || data.length === 0) {
+                    addBubble("…(no response)", 'bot');
+                    return;
+                }
+
+                data.forEach(item => {
+                    if (item.text) {
+                        addBubble(item.text, 'bot', { buttons: item.buttons });
+                    } else if (item.image) {
+                        addBubble('', 'bot', { image: item.image, buttons: item.buttons });
+                    } else if (item.custom) {
+                        
+                        addBubble('' + JSON.stringify(item.custom), 'bot');
+                    } else {
+                        addBubble('(received a message with no text)', 'bot');
+                    }
+                });
+            } catch (err) {
+                removeEl(typing);
+                addBubble('Request failed. Check server URL and that Rasa is running.', 'bot');
+            }
+        }
+
+        els.send.addEventListener('click', () => sendMessage());
+        els.input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
+        });
+        els.save.addEventListener('click', () => { saveState(); pingStatus(); });
+        els.ping.addEventListener('click', pingStatus);
+        document.querySelectorAll('.chip').forEach(ch => {
+            ch.addEventListener('click', () => sendMessage(ch.textContent));
+        });
+
+       
+        addBubble("Hi! I can answer drug/product queries like:\n• “ingredients of Zestoretic 20/25 Oral Tablet”\n• “list 10 products that contain ibuprofen”\n• “what's the generic for Zestril?”", 'bot');
+
+        pingStatus();
+    </script>
+</body>
+
+</html>

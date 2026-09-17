@@ -1,0 +1,91 @@
+version: "3.1"
+
+rules:
+
+
+- rule: Greet
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Help / usage
+  steps:
+    - intent: help_usage
+    - action: utter_help
+
+- rule: Bot challenge
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+- rule: Out of scope
+  steps:
+    - intent: out_of_scope
+    - action: utter_out_of_scope
+
+- rule: NLU fallback
+  steps:
+    - intent: nlu_fallback
+    - action: utter_fallback
+
+
+- rule: Affirm acknowledge
+  steps:
+    - intent: affirm
+    - action: utter_ack
+
+- rule: Deny acknowledge
+  steps:
+    - intent: deny
+    - action: utter_ack
+
+
+- rule: Product → Ingredients
+  steps:
+    - intent: ask_product_ingredients
+    - action: action_get_product_ingredients
+
+- rule: Ingredient → Products
+  steps:
+    - intent: ask_products_by_ingredient
+    - action: action_get_products_by_ingredient
+
+- rule: Product substitutes (same active set)
+  steps:
+    - intent: ask_product_substitutes
+    - action: action_get_product_substitutes
+
+- rule: Co-ingredient partners (ingredient-ish)
+  steps:
+    - intent: ask_co_ingredient_partners
+    - action: action_get_co_ingredient_partners
+
+- rule: Similar by combo overlap
+  steps:
+    - intent: ask_similar_by_combo_overlap
+    - action: action_get_similar_by_combo_overlap
+
+- rule: Brand → Generic
+  steps:
+    - intent: ask_brand_to_generic
+    - action: action_brand_to_generic
+
+- rule: Generic → Brands
+  steps:
+    - intent: ask_generic_to_brands
+    - action: action_generic_to_brands
+
+- rule: Extract strengths (best-effort)
+  steps:
+    - intent: ask_extract_strengths
+    - action: action_extract_strengths
+
+- rule: Ancestry / hierarchy paths
+  steps:
+    - intent: ask_ancestry_paths
+    - action: action_get_ancestry_paths

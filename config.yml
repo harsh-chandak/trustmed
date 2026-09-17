@@ -1,0 +1,47 @@
+version: "3.1"
+
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+    OOV_token: oov
+    token_pattern: (?u)\b\w+\b
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 3
+    max_ngram: 5
+
+  - name: RegexEntityExtractor
+    case_sensitive: false
+    use_lookup_tables: false      
+    use_regexes: true
+    use_word_boundaries: true
+    entity_types: ["top_k"]       
+
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+    entity_recognition: true
+
+  - name: EntitySynonymMapper
+
+  - name: FallbackClassifier
+    threshold: 0.30
+    ambiguity_threshold: 0.10
+
+policies:
+  - name: RulePolicy
+    core_fallback_threshold: 0.30
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: true
+  - name: MemoizationPolicy
+    max_history: 5
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 50
+    constrain_similarities: true
+
+assistant_id: 20251004-000803-hot-iteration

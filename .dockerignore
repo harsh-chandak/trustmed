@@ -1,0 +1,10 @@
+# keep actions/ included
+__pycache__/
+*.pyc
+*.pyo
+*.log
+.env
+.venv
+.git
+.gitignore
+node_modules/

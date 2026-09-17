@@ -1,0 +1,320 @@
+version: '3.1'
+nlu:
+- intent: brand_to_generic
+  examples: '- find the generic for [Epaned](brand_name)
+
+    - what is the generic for [Epaned](brand_name)?
+
+    - tell me the generic for [Epaned](brand_name)
+
+    - find the generic for [Vasotec](brand_name)
+
+    - what''s [Vasotec](brand_name)''s generic?
+
+    - generic name of [Vasotec](brand_name)
+
+    - generic name of [Vaseretic](brand_name)
+
+    - find the generic for [Vaseretic](brand_name)
+
+    - what is the generic for [Vaseretic](brand_name)?
+
+    - find the generic for [Vaseretic](brand_name)
+
+    - tell me the generic for [Vaseretic](brand_name)
+
+    - what is the generic for [Vaseretic](brand_name)?
+
+    - tell me the generic for [Zestril](brand_name)
+
+    - what is [Zestril](brand_name) generic called?
+
+    - what is the generic for [Zestril](brand_name)?
+
+    - what is the generic for [Qbrelis](brand_name)?
+
+    - find the generic for [Qbrelis](brand_name)
+
+    - generic name of [Qbrelis](brand_name)
+
+    - generic name of [Prinivil](brand_name)
+
+    - tell me the generic for [Prinivil](brand_name)
+
+    - what is the generic for [Prinivil](brand_name)?
+
+    - tell me the generic for [Zestoretic](brand_name)
+
+    - generic name of [Zestoretic](brand_name)
+
+    - what is [Zestoretic](brand_name) generic called?
+
+    - generic name of [Zestoretic](brand_name)
+
+    - what is [Zestoretic](brand_name) generic called?
+
+    - what''s [Zestoretic](brand_name)''s generic?
+
+    - what is the generic for [Prestalia](brand_name)?
+
+    - generic name of [Prestalia](brand_name)
+
+    - what is [Prestalia](brand_name) generic called?
+
+    - what''s [Prestalia](brand_name)''s generic?
+
+    - find the generic for [Prestalia](brand_name)
+
+    - generic name of [Prestalia](brand_name)
+
+    - generic name of [Aceon](brand_name)
+
+    - what''s [Aceon](brand_name)''s generic?
+
+    - what is the generic for [Aceon](brand_name)?
+
+    - what is the generic for [Altace](brand_name)?
+
+    - what is [Altace](brand_name) generic called?
+
+    - find the generic for [Altace](brand_name)
+
+    - what''s [Cardalis](brand_name)''s generic?
+
+    - find the generic for [Cardalis](brand_name)
+
+    - tell me the generic for [Cardalis](brand_name)
+
+    - what is the generic for [Cardalis](brand_name)?
+
+    - what is [Cardalis](brand_name) generic called?
+
+    - find the generic for [Cardalis](brand_name)
+
+    - what is [Lotrel](brand_name) generic called?
+
+    - what is the generic for [Lotrel](brand_name)?
+
+    - what''s [Lotrel](brand_name)''s generic?
+
+    - find the generic for [Lotrel](brand_name)
+
+    - tell me the generic for [Lotrel](brand_name)
+
+    - what''s [Lotrel](brand_name)''s generic?
+
+    - tell me the generic for [Lotensin HCT](brand_name)
+
+    - generic name of [Lotensin HCT](brand_name)
+
+    - what is the generic for [Lotensin HCT](brand_name)?
+
+    - what is the generic for [Lotensin HCT](brand_name)?
+
+    - generic name of [Lotensin HCT](brand_name)
+
+    - what''s [Lotensin HCT](brand_name)''s generic?
+
+    - what is the generic for [Lotensin](brand_name)?
+
+    - generic name of [Lotensin](brand_name)
+
+    - find the generic for [Lotensin](brand_name)
+
+    - what is [Tribenzor](brand_name) generic called?
+
+    - what''s [Tribenzor](brand_name)''s generic?
+
+    - find the generic for [Tribenzor](brand_name)
+
+    - find the generic for [Tribenzor](brand_name)
+
+    - what''s [Tribenzor](brand_name)''s generic?
+
+    - generic name of [Tribenzor](brand_name)
+
+    - what''s [Tribenzor](brand_name)''s generic?
+
+    - find the generic for [Tribenzor](brand_name)
+
+    - generic name of [Tribenzor](brand_name)
+
+    - find the generic for [Tekturna HCT](brand_name)
+
+    - what''s [Tekturna HCT](brand_name)''s generic?
+
+    - what is the generic for [Tekturna HCT](brand_name)?
+
+    - tell me the generic for [Tekturna HCT](brand_name)
+
+    - generic name of [Tekturna HCT](brand_name)
+
+    - find the generic for [Tekturna HCT](brand_name)
+
+    - generic name of [Aldactazide](brand_name)
+
+    - what is [Aldactazide](brand_name) generic called?
+
+    - tell me the generic for [Aldactazide](brand_name)
+
+    - what''s [Aldactazide](brand_name)''s generic?
+
+    - tell me the generic for [Aldactazide](brand_name)
+
+    - generic name of [Aldactazide](brand_name)
+
+    - find the generic for [Dyazide](brand_name)
+
+    - what''s [Dyazide](brand_name)''s generic?
+
+    - what is the generic for [Dyazide](brand_name)?
+
+    - generic name of [Dyazide](brand_name)
+
+    - what is the generic for [Dyazide](brand_name)?
+
+    - what''s [Dyazide](brand_name)''s generic?
+
+    - what is [Inzirqo](brand_name) generic called?
+
+    - what''s [Inzirqo](brand_name)''s generic?
+
+    - what is the generic for [Inzirqo](brand_name)?
+
+    - generic name of [Micardis-HCT](brand_name)
+
+    - tell me the generic for [Micardis-HCT](brand_name)
+
+    - what''s [Micardis-HCT](brand_name)''s generic?
+
+    - generic name of [Micardis-HCT](brand_name)
+
+    - what is [Micardis-HCT](brand_name) generic called?
+
+    - tell me the generic for [Micardis-HCT](brand_name)
+
+    - find the generic for [Atacand HCT](brand_name)
+
+    - what is [Atacand HCT](brand_name) generic called?
+
+    - generic name of [Atacand HCT](brand_name)
+
+    - what''s [Atacand HCT](brand_name)''s generic?
+
+    - generic name of [Atacand HCT](brand_name)
+
+    - tell me the generic for [Atacand HCT](brand_name)
+
+    - find the generic for [Diovan HCT](brand_name)
+
+    - tell me the generic for [Diovan HCT](brand_name)
+
+    - what''s [Diovan HCT](brand_name)''s generic?
+
+    - find the generic for [Diovan HCT](brand_name)
+
+    - tell me the generic for [Diovan HCT](brand_name)
+
+    - what is [Diovan HCT](brand_name) generic called?
+
+    - tell me the generic for [Accuretic](brand_name)
+
+    - what is [Accuretic](brand_name) generic called?
+
+    - what''s [Accuretic](brand_name)''s generic?
+
+    - generic name of [Accuretic](brand_name)
+
+    - find the generic for [Accuretic](brand_name)
+
+    - what is [Accuretic](brand_name) generic called?
+
+    - what is the generic for [Avalide](brand_name)?
+
+    - find the generic for [Avalide](brand_name)
+
+    - tell me the generic for [Avalide](brand_name)
+
+    - generic name of [Avalide](brand_name)
+
+    - find the generic for [Avalide](brand_name)
+
+    - what is [Avalide](brand_name) generic called?
+
+    - tell me the generic for [Benicar HCT](brand_name)
+
+    - what is the generic for [Benicar HCT](brand_name)?
+
+    - what is [Benicar HCT](brand_name) generic called?
+
+    - what is [Benicar HCT](brand_name) generic called?
+
+    - tell me the generic for [Benicar HCT](brand_name)
+
+    - find the generic for [Benicar HCT](brand_name)
+
+    - tell me the generic for [Exforge HCT](brand_name)
+
+    - what''s [Exforge HCT](brand_name)''s generic?
+
+    - what is the generic for [Exforge HCT](brand_name)?
+
+    - find the generic for [Exforge HCT](brand_name)
+
+    - what is the generic for [Exforge HCT](brand_name)?
+
+    - what''s [Exforge HCT](brand_name)''s generic?
+
+    - find the generic for [Exforge HCT](brand_name)
+
+    - what''s [Exforge HCT](brand_name)''s generic?
+
+    - what is the generic for [Exforge HCT](brand_name)?
+
+    - what''s [Ziac](brand_name)''s generic?
+
+    - what is [Ziac](brand_name) generic called?
+
+    - generic name of [Ziac](brand_name)
+
+    - what is [Ziac](brand_name) generic called?
+
+    - what is the generic for [Ziac](brand_name)?
+
+    - what''s [Ziac](brand_name)''s generic?
+
+    - tell me the generic for [Lopressor HCT](brand_name)
+
+    - generic name of [Lopressor HCT](brand_name)
+
+    - what is the generic for [Lopressor HCT](brand_name)?
+
+    - find the generic for [Lopressor HCT](brand_name)
+
+    - what''s [Lopressor HCT](brand_name)''s generic?
+
+    - generic name of [Lopressor HCT](brand_name)
+
+    - generic name of [Maxzide](brand_name)
+
+    - what''s [Maxzide](brand_name)''s generic?
+
+    - find the generic for [Maxzide](brand_name)
+
+    - tell me the generic for [Maxzide](brand_name)
+
+    - find the generic for [Maxzide](brand_name)
+
+    - what is the generic for [Maxzide](brand_name)?
+
+    - tell me the generic for [Hyzaar](brand_name)
+
+    - what''s [Hyzaar](brand_name)''s generic?
+
+    - what is [Hyzaar](brand_name) generic called?
+
+    - what is the generic for [Hyzaar](brand_name)?
+
+    - find the generic for [Hyzaar](brand_name)
+
+    - what''s [Hyzaar](brand_name)''s generic?'

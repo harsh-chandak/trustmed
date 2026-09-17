@@ -1,0 +1,63 @@
+{
+  "top_k": {
+    "precision": 1.0,
+    "recall": 0.8181818181818182,
+    "f1-score": 0.9,
+    "support": 11,
+    "confused_with": {}
+  },
+  "product_name": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 107,
+    "confused_with": {}
+  },
+  "ingredient_name": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 28,
+    "confused_with": {}
+  },
+  "drug_name": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "generic_name": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "brand_name": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.055900621118012424,
+    "f1-score": 0.10588235294117647,
+    "support": 161
+  },
+  "macro avg": {
+    "precision": 0.16666666666666666,
+    "recall": 0.13636363636363638,
+    "f1-score": 0.15,
+    "support": 161
+  },
+  "weighted avg": {
+    "precision": 0.06832298136645963,
+    "recall": 0.055900621118012424,
+    "f1-score": 0.061490683229813665,
+    "support": 161
+  },
+  "accuracy": 0.7617554858934169
+}

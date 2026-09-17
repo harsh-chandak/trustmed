@@ -1,0 +1,294 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good afternoon
+    - good evening
+    - yo
+    - hi there
+    - hey there
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - talk to you soon
+    - thanks, bye
+    - catch you later
+    - bye bye
+
+- intent: affirm
+  examples: |
+    - yes
+    - yup
+    - sure
+    - correct
+    - that's right
+    - please do
+    - sounds good
+    - ok
+    - absolutely
+
+- intent: deny
+  examples: |
+    - no
+    - nope
+    - not really
+    - don't
+    - that's not right
+    - nah
+    - rather not
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - who am I talking to?
+    - are you a human?
+    - is this automated?
+    - are you the TrustMed bot?
+
+- intent: help_usage
+  examples: |
+    - help
+    - what can you do?
+    - how do I use this?
+    - show me examples
+    - usage
+    - what kinds of questions can I ask?
+    - how does this work?
+
+- intent: out_of_scope
+  examples: |
+    - book me a flight to Paris
+    - tell me a joke about penguins
+    - what's the weather in Berlin tomorrow?
+    - convert 100 USD to JPY
+    - set a timer for 15 minutes
+
+
+- intent: ask_product_ingredients
+  examples: |
+    - what are the active ingredients in [HCTZ 12.5 MG / lisinopril 20 MG Oral Tablet](product_name)?
+    - list ingredients for [Zestoretic 10/12.5 Oral Tablet](product_name)
+    - show me the ingredients of [Zestril 20 MG Oral Tablet](product_name)
+    - what's in [Qbrelis 1 MG in 1 mL Oral Solution](product_name)?
+    - ingredients of [ibuprofen 800 MG / famotidine 26.6 MG Oral Tablet](product_name)
+    - active ingredients for [Combogesic 325 MG / 97.5 MG Oral Tablet](product_name)
+    - ingredients for [Zestoretic 20/25 Oral Tablet](product_name)
+    - what's in [Reprexain 5/200 (hydrocodone / ibuprofen) Oral Tablet](product_name)?
+    - ingredients for [Zestril 10 MG Oral Tablet](product_name)
+    - what are the ingredients?
+    - show ingredients
+    - ingredients please
+    - what’s in this product?
+    - list the actives for this product
+    - tell me the ingredients of this drug
+    - what are the ingredients in [Zestril 20 MG Oral Tablet](product_name)?
+    - ingredients of [HCTZ 12.5 MG / lisinopril 20 MG Oral Tablet](product_name)
+    - show ingredients for [Qbrelis 1 MG in 1 mL Oral Solution](product_name)
+
+
+- intent: ask_products_by_ingredient
+  examples: |
+    - show products with [lisinopril](ingredient_name)
+    - list all products containing [ibuprofen](ingredient_name)
+    - which products have [hydroCHLOROthiazide](ingredient_name)?
+    - products that include [naproxen](ingredient_name)
+    - give me products for [acetaminophen](ingredient_name)
+    - list [10](top_k) products that contain [ibuprofen](ingredient_name)
+    - show [15](top_k) products with [acetaminophen](ingredient_name)
+    - list top [5](top_k) [lisinopril](ingredient_name) products
+    - show [20](top_k) results for [naproxen](ingredient_name)
+    - products for [APAP](ingredient_name)
+    - items with [HCTZ](ingredient_name)
+    - show products with this ingredient
+    - which products contain it?
+    - what products contain this ingredient?
+    - list products for this compound
+
+
+- intent: ask_product_substitutes
+  examples: |
+    - find substitutes for [Zestoretic 20/25 Oral Tablet](product_name)
+    - products with the same actives as [HCTZ 12.5 MG / lisinopril 10 MG Oral Tablet](product_name)
+    - any equivalent products to [Zestril 10 MG Oral Tablet](product_name)?
+    - alternatives to [Reprexain 5/200 (hydrocodone / ibuprofen) Oral Tablet](product_name)
+    - show [10](top_k) substitutes for [Zestoretic 10/12.5 Oral Tablet](product_name)
+    - list top [5](top_k) equivalents of [Zestoretic 20/25 Oral Tablet](product_name)
+    - show substitutes
+    - any equivalents?
+    - show substitutes for this product
+    - list equivalent products
+
+
+- intent: ask_co_ingredient_partners
+  examples: |
+    - common co-ingredients with [ibuprofen](ingredient_name)
+    - which ingredients are often combined with [lisinopril](ingredient_name)?
+    - coformulated with [acetaminophen](ingredient_name)
+    - typical partners for [hydrocodone](ingredient_name)
+    - what pairs with [naproxen](ingredient_name)?
+    - list [12](top_k) common partners for [ibuprofen](ingredient_name)
+    - show common co-ingredients
+    - what is this usually combined with?
+    - what are common partners for this ingredient?
+
+
+- intent: ask_similar_by_combo_overlap
+  examples: |
+    - ingredients related to [ibuprofen](ingredient_name) by combo overlap
+    - similar drugs to [naproxen](ingredient_name) based on co-formulation
+    - show combo overlap neighbors for [acetaminophen](ingredient_name)
+    - who co-occurs with [hydrocodone](ingredient_name) most often?
+    - show top [10](top_k) neighbors for [ibuprofen](ingredient_name)
+    - list [25](top_k) similar to [lisinopril](ingredient_name)
+    - show combo overlap neighbors
+    - similar by co-formulation
+    - show similar ingredients to this one
+
+
+- intent: ask_brand_to_generic
+  examples: |
+    - what's the generic for [Zestril](brand_name)?
+    - [Qbrelis](brand_name) generic name
+    - generic name of [Prinize](brand_name)
+    - brand [Carace](brand_name) generic?
+    - the generic of [Zestoretic](brand_name)
+    - what's the generic name?
+    - generic please
+    - what is the generic of this brand?
+
+
+- intent: ask_generic_to_brands
+  examples: |
+    - brand names for [lisinopril](generic_name)
+    - which brands correspond to [ibuprofen](generic_name)?
+    - show brands of [naproxen](generic_name)
+    - list brands for [hydroCHLOROthiazide](generic_name)
+    - show [10](top_k) brands for [acetaminophen](generic_name)
+    - which brands are there?
+    - show brand names
+    - what brands match this generic?
+
+
+- intent: ask_extract_strengths
+  examples: |
+    - extract strengths for [ibuprofen](ingredient_name)
+    - show common strengths for [lisinopril](ingredient_name)
+    - what strengths do we have near [naproxen](ingredient_name)?
+    - list strengths for [acetaminophen](ingredient_name)
+    - show [15](top_k) strengths for [ibuprofen](ingredient_name)
+    - extract strengths
+    - show strengths
+    - show strengths for this ingredient
+
+
+- intent: ask_ancestry_paths
+  examples: |
+    - show ontology paths for [ibuprofen](drug_name)
+    - what is the class ancestry of [lisinopril](drug_name)?
+    - give me the ancestry path for [naproxen](drug_name)
+    - get hierarchy for [ketorolac tromethamine](drug_name)
+    - show ancestry path
+    - show hierarchy
+    - show ancestry for this drug
+
+
+
+- lookup: ingredient_name
+  examples: |
+    - ibuprofen
+    - lisinopril
+    - hydroCHLOROthiazide
+    - hydrochlorothiazide
+    - acetaminophen
+    - APAP
+    - naproxen
+    - ketoprofen
+    - flurbiprofen
+    - fenoprofen
+    - oxaprozin
+    - caffeine
+    - hydrocodone
+    - codeine
+    - dextromethorphan
+    - guaifenesin
+    - phenylephrine hydrochloride
+    - dextromethorphan hydrobromide
+
+- lookup: brand_name
+  examples: |
+    - Zestril
+    - Zestoretic
+    - Qbrelis
+    - Reprexain
+    - Combogesic
+    - Motrin
+    - Advil
+    - Duexis
+    - Prinzide
+    - Carace
+
+- lookup: generic_name
+  examples: |
+    - lisinopril
+    - ibuprofen
+    - naproxen
+    - acetaminophen
+    - hydrochlorothiazide
+
+- lookup: product_name
+  examples: |
+    - HCTZ 12.5 MG / lisinopril 20 MG Oral Tablet
+    - Zestoretic 10/12.5 Oral Tablet
+    - Zestoretic 20/25 Oral Tablet
+    - Zestril 10 MG Oral Tablet
+    - Zestril 20 MG Oral Tablet
+    - Qbrelis 1 MG in 1 mL Oral Solution
+    - Reprexain 10/200 Oral Tablet
+    - Reprexain 5/200 (hydrocodone / ibuprofen) Oral Tablet
+    - ibuprofen 800 MG / famotidine 26.6 MG Oral Tablet
+    - Combogesic 325 MG / 97.5 MG Oral Tablet
+
+
+- regex: top_k
+  examples: |
+    # "top 10", "top 5", etc.
+    - (?<=\btop\s)\d{1,3}\b
+    # "show 10 products", "list 15 brands", "display 25 results", etc.
+    - \b\d{1,3}\b(?=\s+(?:products?|results?|items?|brands?|neighbors?|substitutes?|equivalents?|strengths?)\b)
+- regex: number
+  examples: |
+    - \d+(\.\d+)?
+- regex: percent
+  examples: |
+    - \d+(\.\d+)?\s?%
+- regex: strength
+  examples: |
+    - (?i)\b\d+(\.\d+)?\s?(mg|mcg|g|%)\b
+- regex: combo_strength
+  examples: |
+    - (?i)\b\d+(\.\d+)?\s?(mg|mcg|g)\s?\/\s?\d+(\.\d+)?\s?(mg|mcg|g)\b
+
+
+- synonym: acetaminophen
+  examples: |
+    - APAP
+    - paracetamol
+
+- synonym: hydroCHLOROthiazide
+  examples: |
+    - HCTZ
+    - hydrochlorothiazide
+
+- synonym: ibuprofen
+  examples: |
+    - advil
+    - motrin

@@ -1,0 +1,138 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - nlu_fallback
+  - ask_product_ingredients
+  - ask_products_by_ingredient
+  - ask_product_substitutes
+  - ask_co_ingredient_partners
+  - ask_similar_by_combo_overlap
+  - ask_brand_to_generic
+  - ask_generic_to_brands
+  - ask_extract_strengths
+  - ask_ancestry_paths
+  - help_usage
+  - out_of_scope
+
+entities:
+  - product_name
+  - ingredient_name
+  - brand_name
+  - generic_name
+  - drug_name
+  - top_k
+
+slots:
+  product_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: product_name
+      - type: from_text
+        intent:
+          - ask_product_ingredients
+          - ask_product_substitutes
+
+  ingredient_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ingredient_name
+      - type: from_text
+        intent:
+          - ask_products_by_ingredient
+          - ask_co_ingredient_partners
+          - ask_similar_by_combo_overlap
+          - ask_extract_strengths
+
+  brand_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: brand_name
+      - type: from_text
+        intent:
+          - ask_brand_to_generic
+
+  generic_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: generic_name
+      - type: from_text
+        intent:
+          - ask_generic_to_brands
+
+  drug_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: drug_name
+      - type: from_text
+        intent:
+          - ask_ancestry_paths
+
+  top_k:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: top_k
+      - type: from_text
+        intent:
+          - ask_products_by_ingredient
+          - ask_product_substitutes
+          - ask_co_ingredient_partners
+          - ask_similar_by_combo_overlap
+          - ask_extract_strengths
+
+responses:
+  utter_greet:
+    - text: "Hey! How can I help you with the drug knowledge base today?"
+  utter_goodbye:
+    - text: "Bye! If you need more drug info, just ask."
+  utter_fallback:
+    - text: "Sorry, I didn’t get that. Could you rephrase or provide the drug/product name?"
+  utter_help:
+    - text: |
+        I can help with:
+        • Product → active ingredients
+        • Ingredient → products
+        • Product substitutes (same actives)
+        • Co-ingredient partners
+        • Similar by combo overlap
+        • Brand ↔ Generic
+        • Extract strengths
+        • Ancestry / hierarchy paths
+        Try: “List products that contain ibuprofen” or “What’s the generic for Zestril?”
+  utter_iamabot:
+    - text: "I’m TrustMed, your drug knowledge assistant."
+  utter_out_of_scope:
+    - text: "Sorry, that seems outside my scope. Try asking about drug ingredients, products, or brands."
+  utter_ack:
+    - text: "Got it."
+
+actions:
+  - action_get_product_ingredients
+  - action_get_products_by_ingredient
+  - action_get_product_substitutes
+  - action_get_co_ingredient_partners
+  - action_get_similar_by_combo_overlap
+  - action_brand_to_generic
+  - action_generic_to_brands
+  - action_extract_strengths
+  - action_get_ancestry_paths
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
