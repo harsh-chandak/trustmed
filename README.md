@@ -6,10 +6,11 @@
 
 # TrustMed — Drug Knowledge Assistant
 
-[![Play the fifteen-second tour: 354,029 medical concepts and over 23 million relationships, answered by traversing a graph rather than matching text](assets/brag-poster.jpg)](https://github.com/harsh-chandak/trustmed/blob/main/assets/brag.mp4)
+[![Fifteen seconds: 354,029 medical concepts and over 23 million relationships, answered by traversing a graph rather than matching text](assets/brag.gif)](https://github.com/harsh-chandak/trustmed/blob/main/assets/brag.mp4)
 
-<sub>▶ Fifteen seconds on why the answer comes from a traversal. GitHub strips
-`<video>` from READMEs, so the poster above links to the player.</sub>
+<sub>Plays above. GitHub strips `<video>` from READMEs, so this is the silent
+loop; [the full video](https://github.com/harsh-chandak/trustmed/blob/main/assets/brag.mp4)
+has sound.</sub>
 
 "Find substitutes for this product with the same active set" is not a search
 query. It is a graph traversal: resolve the brand to its ingredients, find other
