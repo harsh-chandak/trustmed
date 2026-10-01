@@ -1,33 +1,50 @@
-# 💊 TrustMed — Drug Knowledge Assistant
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="assets/card-light.png">
+  <img src="assets/card-light.png" alt="TrustMed. Answers drug questions by traversing a medical knowledge graph instead of matching text against it. 354 thousand medical concepts, over 23 million graph relationships, sourced from UMLS RxNorm and SNOMED CT. Built with Rasa, Neo4j, Python and openFDA.">
+</picture>
 
-An intelligent conversational assistant that answers complex drug and pharmaceutical queries using **Rasa**, **Neo4j**, and a custom **medical knowledge graph** — exposed through REST and a lightweight web chat UI.
+# TrustMed — Drug Knowledge Assistant
+
+"Find substitutes for this product with the same active set" is not a search
+query. It is a graph traversal: resolve the brand to its ingredients, find other
+products whose ingredient set matches, and rank them. Answer it by matching text
+and you get products with similar names, which is the wrong answer in a way that
+looks like the right one.
+
+So TrustMed answers from a graph instead. 354,029 concepts from the UMLS
+Metathesaurus — RxNorm and SNOMED CT — linked by over 23 million relationships in
+Neo4j. Rasa handles the conversation and extracts the entities; every answer is
+produced by walking edges.
+
+Every answer also carries a **Trust Score** out of 100 and a one-line reason, so
+it says how much to believe it rather than stating everything in the same
+confident tone. The score weights the quality of the underlying data, the
+specificity of the query and the NLU confidence, and openFDA label IDs are
+attached as evidence where they exist.
 
 > ⚠️ **Medical Disclaimer:** TrustMed is a technical demo for information retrieval and graph exploration. It is **not** a medical device and does **not** provide medical advice. Always consult a licensed professional for medical decisions.
 
----
+## What it answers
 
-## 🧠 Overview
-
-**TrustMed** lets you explore relationships between drugs, ingredients, brands, and related concepts using natural language. The assistant supports queries like:
-
-- “What are the active ingredients in `<Product>`?”
-- “List products that contain `<Ingredient>`.”
-- “What’s the generic for `<Brand>`?”
-- “Find substitutes for `<Product>` with the same active set.”
-- “Common co-ingredients with `<Ingredient>`.”
-- “Suggest ingredients related to `<Ingredient>` by frequent co‑formulation.”
-- “Show strengths near `<Ingredient>` parsed from product names.”
+- "What are the active ingredients in `<Product>`?"
+- "List products that contain `<Ingredient>`."
+- "What's the generic for `<Brand>`?"
+- "Find substitutes for `<Product>` with the same active set."
+- "Common co-ingredients with `<Ingredient>`."
+- "Suggest ingredients related to `<Ingredient>` by frequent co-formulation."
+- "Show strengths near `<Ingredient>` parsed from product names."
 
 ### What powers the assistant
 
 - **Rasa NLU** for intents/entities (DIET) and light regex for numeric `top_k`
-- **Neo4j** graph for fast traversal queries over UMLS/RxNorm‑derived concepts
+- **Neo4j** graph for fast traversal queries over UMLS/RxNorm-derived concepts
 - **Custom Action Server** that calls a unified **KnowledgeBase** class
 - **Docker Compose** to orchestrate Neo4j + Rasa + Actions (+ static web UI)
 
 ---
 
-## 🧩 System Architecture
+## System Architecture
 
 ```
 +-------------------+
@@ -54,7 +71,7 @@ All components run locally via **Docker Compose** or can be started individually
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 TrustMedProject/
@@ -89,7 +106,7 @@ TrustMedProject/
 
 ---
 
-## 📦 Dataset
+## Dataset
 
 This project uses the **UMLS Metathesaurus** (principally **RxNorm** + **SNOMED CT US**) to build a medication-oriented graph:
 
@@ -121,7 +138,7 @@ This project uses the **UMLS Metathesaurus** (principally **RxNorm** + **SNOMED 
 
 ---
 
-## 🔎 Bottom-Up Focused Slice (Overlay Mode)
+## Bottom-Up Focused Slice (Overlay Mode)
 
 To measure quality quickly and iterate safely, the project also includes a small, **curated dataset** (overlay) that the action server can consult before querying the full graph.
 
@@ -175,7 +192,7 @@ When present, the overlay is used for **brand_to_generic**, **product_ingredient
 
 ---
 
-## 🧮 Trust Score
+## Trust Score
 
 Each answer includes a **Trust Score (0–100)** and a short **“Why”** line.
 
@@ -187,7 +204,7 @@ This makes results transparent for reviewers and end-users.
 
 ---
 
-## ⚙️ Setup & Prerequisites
+## Setup & Prerequisites
 
 - **OS:** macOS / Linux / Windows (WSL2 recommended)
 - **Docker Desktop** (for Compose)
@@ -222,7 +239,7 @@ export ACTION_SERVER_URL=http://actions:5055/webhook
 
 ---
 
-## 🗃️ Data Ingestion (UMLS → Neo4j)
+## Data Ingestion (UMLS → Neo4j)
 
 1) **Place files** under `Data/META/`:
 
@@ -271,7 +288,7 @@ SET r.type = r.rela;
 
 ---
 
-## 🤖 Rasa NLU & Configuration
+## Rasa NLU & Configuration
 
 `config.yml`:
 
@@ -298,7 +315,7 @@ In Docker Compose, this is set to `http://action-server:5055/webhook`.
 
 ---
 
-## 🧱 Core Code Components
+## Core Code Components
 
 ### `knowledge_base.py` — Neo4j Access Layer
 
@@ -343,7 +360,7 @@ python actions.py
 
 ---
 
-## 🌐 Channels & Endpoints
+## Channels & Endpoints
 
 - **REST channel** is enabled by default in `credentials.yml`.
 - For Rasa Enterprise dev channel, `rasa.url: "http://localhost:5002/api"` is included (optional).
@@ -351,7 +368,7 @@ python actions.py
 
 ---
 
-## 🛠️ How It Works
+## How It Works
 
 **Rasa** extracts intents/entities → **Actions Server** calls the **Knowledge Base (Neo4j)** → results come back as clean text lists.
 
@@ -365,7 +382,7 @@ User → Rasa (intent/entities) → actions.py → knowledge_base.py → Neo4j �
 
 ---
 
-## 🚀 Run It
+## Run It
 
 ### A) Docker Compose (recommended)
 
@@ -405,7 +422,7 @@ Expected ports:
 
 ---
 
-## 💬 Example Conversations
+## Example Conversations
 
 - **“What are the ingredients in Zestoretic 20/25 Oral Tablet?”**  
   → hydroCHLOROthiazide, and lisinopril
@@ -421,7 +438,7 @@ Expected ports:
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 - **No results for otherwise common queries**  
   Ensure you ran the **post‑load normalization** to set `name_lc` and promoted `rela` into `type`. Without it, lookups by lower‑case and typed traversals will underperform.
@@ -437,7 +454,7 @@ Expected ports:
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 
 | Stack                   | Purpose                        |
 | ----------------------- | ------------------------------ |
@@ -451,7 +468,7 @@ Expected ports:
 
 ---
 
-## 👥 Team Members
+## Team Members
 
 - **Harsh Nitinkumar Chandak** `hchanda4@asu.edu`
 - **Swathi Gudivada** `sgudiva3@asu.edu`
@@ -461,7 +478,7 @@ Expected ports:
 
 ---
 
-## 📝 License
+## License
 
 This repository contains code and configuration only. UMLS/RxNorm/SNOMED CT content is subject to their respective licenses and **must be obtained from official sources**.
 
